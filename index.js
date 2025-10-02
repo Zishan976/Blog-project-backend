@@ -32,3 +32,10 @@ app.use('/api/posts', postRoutes);
 
 // Export the app for Vercel serverless functions
 module.exports = app;
+
+// Start server locally if not in Vercel environment
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+    });
+}
