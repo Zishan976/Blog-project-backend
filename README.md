@@ -126,6 +126,25 @@ curl -X POST http://localhost:5000/api/auth/register \
   -d '{"username":"testuser","email":"test@example.com","password":"password123"}'
 ```
 
+## Deployment on Vercel
+
+1. Push your code to a GitHub repository.
+
+2. Go to [Vercel](https://vercel.com) and sign in with your GitHub account.
+
+3. Click "New Project" and import your GitHub repository.
+
+4. In the project settings, add the following environment variables:
+
+   - `MONGODB_URI`: Your MongoDB connection string (e.g., from MongoDB Atlas)
+   - `JWT_SECRET`: A secure secret key for JWT tokens
+
+5. Vercel will automatically detect the `vercel.json` configuration and deploy your app.
+
+6. Once deployed, your API will be available at the Vercel-provided URL (e.g., `https://your-project.vercel.app`).
+
+Note: Ensure your MongoDB database allows connections from all IP addresses (0.0.0.0/0) if using MongoDB Atlas.
+
 ## Contributing
 
 1. Fork the repository

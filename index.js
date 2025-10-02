@@ -30,7 +30,5 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 
-// Start server
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+// Export the app for Vercel serverless functions
+module.exports = app;
