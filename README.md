@@ -52,7 +52,7 @@ A robust backend API for a MERN stack blog application, built with Node.js, Expr
    npm run dev
    ```
 
-The server will run on `http://localhost:5000` (or the port specified in your `.env` file).
+The server will run on `http://localhost:8080` (or the port specified in your `.env` file).
 
 ## API Endpoints
 
@@ -121,7 +121,7 @@ The server will run on `http://localhost:5000` (or the port specified in your `.
 Example curl command for registration:
 
 ```bash
-curl -X POST http://localhost:5000/api/auth/register \
+curl -X POST http://localhost:8080/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"username":"testuser","email":"test@example.com","password":"password123"}'
 ```
